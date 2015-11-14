@@ -57,7 +57,7 @@
 		<section anchor="intro" title="Introduction">
 			<t>Autonomic Networking is a concept of self-management: Autonomic functions self-configure, and negotiate parameters and settings across the network. <xref target="RFC7575"/> defines the fundamental ideas and design goals of Autonomic Networking. A gap analysis of Autonomic Networking is given in <xref target="RFC7576"/>. The reference architecture for Autonomic Networking in the IETF is currently being defined in the document <xref target="I-D.behringer-anima-reference-model"/></t>
 			<t>Autonomic functions need a stable and robust infrastructure to communicate on. This infrastructure should be as robust as possible, and it should be re-usable by all autonomic functions. <xref target="RFC7575"/> calls it the "Autonomic Control Plane". This document defines the Autonomic Control Plane. </t>
-			<t>Today, the management and control plane of networks typically runs in the global routing table, which is dependent on correct configuration and routing. Misconfigurations or routing problems can therefore disrupt management and control channels. Traditionally, an out of band network has been used to recover from such problems, or personnel is sent on site to access devices through console ports. However, both options are operationally expensive.</t>
+			<t>Today, the management and control plane of networks typically runs in the global routing table, which is dependent on correct configuration and routing. Misconfigurations or routing problems can therefore disrupt management and control channels. Traditionally, an out of band network has been used to recover from such problems, or personnel is sent on site to access devices through console ("craft" see <xref target="craft"/>) ports. However, both options are operationally expensive.</t>
 			<t>
 			In increasingly automated networks either controllers or distributed autonomic service agents in the network require a control plane which is independent of the network they manage, to avoid impacting their own operations. </t>
 			<t>
@@ -400,7 +400,7 @@ tunnel :  +-----------+  :   tunnel      :  +-----------+  :  tunnel
 
 	</middle>
 	<back>
-		<references title="References">
+		<references title="Normative References">
 			<?rfc include='reference.RFC.4122'?>
 			<?rfc include='reference.RFC.4193'?>
 			<?rfc include='reference.RFC.6550'?>
@@ -414,6 +414,17 @@ tunnel :  +-----------+  :   tunnel      :  +-----------+  :  tunnel
 			<?rfc include="reference.I-D.behringer-anima-autonomic-addressing.xml"?>
 		</references>
 
+		<references title="Informative References">
+                  <reference anchor="craft"
+                             target="https://en.wikipedia.org/wiki/Craft_access_system">
+                    <front>
+                      <title>Craft Access System</title>
+                      <author surname="Wikipedia"></author>
+                      <date month="Nov" year="2015" />
+                    </front>
+                  </reference>
+                        
+                </references>
 		<section anchor="why-rpl" title="Background on the choice of routing protocol">
 			<t>In a pre-standard implementation, the "IPv6 Routing Protocol for Low-Power and Lossy Networks (RPL, <xref target="RFC6550"/> was chosen. This Appendix explains the reasoning behind that decision.  </t>
 			<t>Requirements for routing in the ACP are: 
@@ -437,3 +448,10 @@ tunnel :  +-----------+  :   tunnel      :  +-----------+  :  tunnel
 
 	</back>
 </rfc>
+
+<!-- Local Variables:  -->
+<!-- mode: xml         -->
+<!-- End:              -->
+
+
+
